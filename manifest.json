@@ -1,0 +1,22 @@
+{
+    "name": "LinkedIn Button Clicker",
+    "version": "0.1",
+    "description": "Send connects to people on LinkedIn automatically",
+    "manifest_version": 3,
+    "permissions":["storage","tabs"],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "action" : {
+        "default_popup" : "index.html"
+    },
+    "content_scripts": [
+        {
+          "js":["contentScripts.js"],
+          "matches": ["https://*.linkedin.com/*"]
+        }
+      ]
+
+
+
+}
